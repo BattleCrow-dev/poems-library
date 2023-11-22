@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    img-src 'self' data:;
+">
+
+    <link rel="icon" href="images/icon.png" sizes="any">
+    <title>Сборник стихов</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Обратная связь</h1>
+    </header>
+
+    <nav>
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="poets.html">Поэты</a>
+        <a class="nav-link" href="contact.html">Обратная связь</a>
+    </nav>
+
+    <main id="contact-main">
+
+        <div class="contact-card">
+            <h2>О создателе</h2>
+            <img src="images/pashkovMain.jpg" alt="Изображение создателя">
+            <p>Привет!</p> 
+            <p>Меня зовут Дмитрий, и я создатель этого сайта в рамках моей курсовой работы.</p>
+            <p>Я люблю стихи и хочу делиться ими с вами.</p>
+            <p>Не стесняйтесь отправить мне свои стихи через форму ниже!</p>
+            <p>Все ваши заявки будут рассмотрены и, кто знает, может вы получите свою страничку на этом сайте.</p>
+        </div>
+
+        <form id="submit-poem-form">
+            <h2>Отправить свое стихотворение</h2>
+            <div>
+                <label for="poet-name">Ваше имя:</label>
+                <input type="text" id="poet-name" name="poet-name">
+            </div>
+            <div>
+                <label for="poem-title">Заголовок стихотворения:</label>
+                <input type="text" id="poem-title" name="poem-title">
+            </div>
+            <div>
+                <label for="poem-text">Текст стихотворения:</label>
+                <textarea id="poem-text" name="poem-text"></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Сборник стихов</p>
+        </div>
+    </footer>
+
+    <script src="scripts/contact-script.js"></script>
+</body>
+
+</html>

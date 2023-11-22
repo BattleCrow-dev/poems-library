@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    img-src 'self' data:;
+">
+
+    <link rel="icon" href="images/icon.png" sizes="any">
+    <title>Сборник стихов</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Список поэтов</h1>
+    </header>
+
+    <nav>
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="poets.html">Поэты</a>
+        <a class="nav-link" href="contact.html">Обратная связь</a>
+    </nav>
+
+    <main id="poets-main">
+        <h2>Выберите поэта для просмотра стихов или биографии:</h2>
+
+        <div id="poets-grid">
+            <div class="poet-card">
+                <img src="images/pushkinMain.jpeg" alt="Пушкин">
+                <h1>Пушкин А.С.</h1>
+                <div class="poet-buttons">
+                    <a href="biography.html?id=1" class="btn-bio">Биография</a>
+                    <a href="poems.html?id=1" class="btn-works">Стихи</a>
+                </div>
+            </div>
+
+            <div class="poet-card">
+                <img src="images/lermontovMain.jpg" alt="Лермонтов">
+                <h1>Лермонтов М.Ю</h1>
+                <div class="poet-buttons">
+                    <a href="biography.html?id=2" class="btn-bio">Биография</a>
+                    <a href="poems.html?id=2" class="btn-works">Стихи</a>
+                </div>
+            </div>
+
+            <div class="poet-card">
+                <img src="images/mayakovskyMain.jpg" alt="Маяковский">
+                <h1>Маяковский В.В.</h1>
+                <div class="poet-buttons">
+                    <a href="biography.html?id=4" class="btn-bio">Биография</a>
+                    <a href="poems.html?id=4" class="btn-works">Стихи</a>
+                </div>
+            </div>
+
+            <div class="poet-card">
+                <img src="images/eseninMain.jpg" alt="Есенин">
+                <h1>Есенин С.А.</h1>
+                <div class="poet-buttons">
+                    <a href="biography.html?id=5" class="btn-bio">Биография</a>
+                    <a href="poems.html?id=5" class="btn-works">Стихи</a>
+                </div>
+            </div>
+
+            <div class="poet-card">
+                <img src="images/pashkovMain.jpg" alt="Пашков">
+                <h1>Пашков Д.С.</h1>
+                <div class="poet-buttons">
+                    <a href="biography.html?id=3" class="btn-bio">Биография</a>
+                    <a href="poems.html?id=3" class="btn-works">Стихи</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Сборник стихов</p>
+        </div>
+    </footer>
+
+    <script src="scripts/poets-script.js"></script>
+</body>
+
+</html>

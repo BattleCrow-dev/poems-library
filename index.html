@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    img-src 'self' data:;
+">
+
+    <link rel="icon" href="images/icon.png" sizes="any">
+    <title>Сборник стихов</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Добро пожаловать на сайт стихов</h1>
+    </header>
+
+    <nav>
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="poets.html">Поэты</a>
+        <a class="nav-link" href="contact.html">Обратная связь</a>
+    </nav>
+
+    <main id="index-main">
+        <section id="random-poem-panel">
+            <h2>Случайный стих</h2>
+            <h3 id="random-poem-name">Название</h3>
+            <div id="random-poem-container"></div>
+        </section>
+
+        <section id="news-panel">
+            <h2>Новости сайта</h2>
+            <!-- В этом блоке будут отображаться новости -->
+            <ul id="news-list">
+                <li>Новость 1: Я получил задание для курсача</li>
+                <li>Новость 2: Я задумался над реализацией курсача</li>
+                <li>Новость 3: Я создал папку с курсачом</li>
+                <li>Новость 4: Я сел, чтобы сделать курсач</li>
+                <li>Новость 5: Я встал, не сделав ничего</li>
+                <li>Новость 6: Я снова сел за курсач</li>
+                <li>Новость 7: Я сделал то, что вы сейчас видите</li>
+            </ul>
+        </section>
+
+        <section id="all-poems-panel">
+            <h2>Все стихи</h2>
+            <div id="poems-container">
+                <!-- Контейнер, в который будут добавляться карточки стихов -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Сборник стихов</p>
+        </div>
+    </footer>
+
+    <script src="scripts/index-script.js"></script>
+</body>
+
+</html>

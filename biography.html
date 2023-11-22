@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    img-src 'self' data:;
+">
+
+    <link rel="icon" href="images/icon.png" sizes="any">
+    <title>Сборник стихов</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="biography-header"></h1>
+    </header>
+
+    <nav>
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="poets.html">Поэты</a>
+        <a class="nav-link" href="contact.html">Обратная связь</a>
+    </nav>
+
+    <main id="biography-main">
+        <div id="biography-grid">
+            <img class="biography-image">
+            <div class="biography-text"></div>
+            <img class="biography-image">
+            <div class="biography-text"></div>
+            <img class="biography-image">
+            <div class="biography-text"></div>
+            <img class="biography-image">
+            <div class="biography-text"></div>
+            <img class="biography-image">
+            <div class="biography-text"></div>
+            <img class="biography-image">
+            <div class="biography-text"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Сборник стихов</p>
+        </div>
+    </footer>
+
+    <script src="scripts/biography-script.js"></script>
+</body>
+
+</html>
