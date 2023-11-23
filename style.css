@@ -46,6 +46,12 @@ nav {
     padding: 15px 0; /* Добавляем отступы сверху и снизу */
 }
 
+#head-of-site {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
 .nav-link {
     color: var(--link-color); /* Желтый цвет для ссылок */
     text-decoration: none;
@@ -65,6 +71,7 @@ nav {
 
 main {
     margin: 0 auto 60px auto; /* Выравнивание контента по центру */
+    padding-top: 200px;
 }
 
 #index-main {
@@ -371,6 +378,8 @@ footer {
     font-style: italic;
     text-align: center;
     font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Стили для странички со стихами */
