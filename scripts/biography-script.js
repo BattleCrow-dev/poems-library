@@ -84,7 +84,6 @@ const pashkovPictures = {
     5: "images/bio/pashkovBio_5.jpg"
 };
 
-// Добавим событие загрузки страницы для выполнения кода при открытии страницы
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const poetId = urlParams.get('id');

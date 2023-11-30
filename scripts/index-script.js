@@ -58,23 +58,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 let currentToast; // Хранение ссылки на текущий toast
 
-// Добавим функцию для загрузки стихов
+
 function loadPoems(poetId) {
-    // Путь к файлу poems.txt
     const filePath = `poems/poems_${poetId}.txt`;
 
-    // Используем Fetch API для загрузки содержимого файла
     fetch(filePath)
         .then(response => response.text())
         .then(poems => displayPoems(poems, poetId))
         .catch(error => console.error('Ошибка при загрузке стихов:', error));
 }
 
-// Функция для отображения стихов на странице
 function displayPoems(poems, poetId) {
     const poemsListContainer = document.getElementById('poems-container');
 
-    // Разбиваем стихи по блокам и создаем элементы списка для каждого стиха
     const poemsArray = poems.split('====');
     poemsArray.forEach(poemBlock => {
         const poemLines = poemBlock.split('\n');

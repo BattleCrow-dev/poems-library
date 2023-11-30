@@ -1,7 +1,7 @@
-let currentToast; // Хранение ссылки на текущий toast
+let currentToast;
 
 function showToast(message, isSuccess = true) {
-    // Удаление текущего toast, если он существует
+
     if (currentToast) {
         currentToast.remove();
     }
@@ -10,16 +10,10 @@ function showToast(message, isSuccess = true) {
     toast.className = `toast ${isSuccess ? 'success' : 'error'}`;
     toast.textContent = message;
 
-    // Ваш код для отображения сообщения
     console.log(message);
-
-    // Добавляем toast на страницу
     document.body.appendChild(toast);
-
-    // Устанавливаем текущий toast
     currentToast = toast;
 
-    // Убираем toast через некоторое время
     setTimeout(() => {
         toast.remove();
     }, 3000);
@@ -52,26 +46,19 @@ function copyPoem(event) {
 }
 
 
-// Добавим функцию для загрузки стихов
 function loadPoems(poetId) {
-    // Путь к файлу poems.txt
     const filePath = `poems/poems_${poetId}.txt`;
 
-    // Используем Fetch API для загрузки содержимого файла
     fetch(filePath)
         .then(response => response.text())
         .then(poems => displayPoems(poems))
         .catch(error => console.error('Ошибка при загрузке стихов:', error));
 }
 
-// Функция для отображения стихов на странице
 function displayPoems(poems) {
     const poemsListContainer = document.getElementById('poems-list-container');
-
-    // Очищаем текущий список стихов
     poemsListContainer.innerHTML = '';
 
-    // Разбиваем стихи по блокам и создаем элементы списка для каждого стиха
     const poemsArray = poems.split('====');
     poemsArray.forEach(poemBlock => {
         const poemLines = poemBlock.split('\n');
@@ -105,7 +92,8 @@ function shareOnOdnoklassniki(event) {
     // Параметры для передачи в API Одноклассников
     const odnoklassnikiParams = {
         url: window.location.href, // URL текущей страницы
-        title: poemTextElement.innerText
+        title: poemTextElement.innerText,
+        description: poemCard.innerText
     };
 
     // Формируем URL для вызова API Одноклассников

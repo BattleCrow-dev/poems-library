@@ -505,9 +505,9 @@ footer {
 }
 
 .success {
-    background-color: var(--success-color); /* Зелёный цвет для успешных сообщений */
+    background-color: var(--success-color);
 }
 
 .error {
-    background-color: var(--error-color); /* Красный цвет для сообщений об ошибках */
+    background-color: var(--error-color);
 }
