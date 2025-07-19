@@ -19,24 +19,17 @@ function showToast(message, isSuccess = true) {
     }, 3000);
 }
 
-// Обновленная функция для копирования текста стихотворения
 function copyPoem(event) {
-    // Получаем кнопку, на которую было нажато
     const button = event.target;
 
-    // Находим ближайший общий предок (poem-card)
     const poemCard = button.closest('.poem-card');
 
-    // Находим элемент с текстом стихотворения внутри poem-card
     const poemTextElement = poemCard.querySelector('.poem-text');
 
-    // Проверяем, что элемент найден
     if (poemTextElement) {
-        // Копируем текст стихотворения в буфер обмена
         const poemText = poemTextElement.textContent || poemTextElement.innerText;
         navigator.clipboard.writeText(poemText)
             .then(() => {
-                // Выводим сообщение об успешном копировании
                 showToast('Текст стихотворения скопирован в буфер обмена', true);
             })
             .catch((err) => {
@@ -80,37 +73,29 @@ function displayPoems(poems) {
 }
 
 function shareOnOdnoklassniki(event) {
-    // Получаем кнопку, на которую было нажато
     const button = event.target;
 
-    // Находим ближайший общий предок (poem-card)
     const poemCard = button.closest('.poem-card');
 
-    // Находим элемент с текстом стихотворения внутри poem-card
     const poemTextElement = poemCard.querySelector('.poem-title');
 
-    // Параметры для передачи в API Одноклассников
     const odnoklassnikiParams = {
-        url: window.location.href, // URL текущей страницы
+        url: window.location.href,
         title: poemTextElement.innerText,
         description: poemCard.innerText
     };
 
-    // Формируем URL для вызова API Одноклассников
     const odnoklassnikiUrl = `https://connect.ok.ru/offer?url=${odnoklassnikiParams.url}&title=${odnoklassnikiParams.title}&description=${odnoklassnikiParams.description}`;
 
     showToast("Молодец, что помнишь о бабушке :)", true)
 
-    // Открываем новое окно с API Одноклассников
     window.open(odnoklassnikiUrl, 'Одноклассники', 'width=600,height=400');
 }
 
-// Добавим событие загрузки страницы для выполнения кода при открытии страницы
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const poetId = urlParams.get('id');
 
-    // Загружаем стихи при загрузке страницы
     loadPoems(poetId);
 
     if (poetId === '1') {
@@ -132,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', (event) => {
         const copyButton = event.target.closest('.btn-copy');
         if (copyButton) {
-            // Вызываем функцию копирования при клике на кнопку
             copyPoem(event);
         }
     });
@@ -140,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', (event) => {
         const shareButton = event.target.closest('.btn-share');
         if (shareButton) {
-            // Вызываем функцию копирования при клике на кнопку
             shareOnOdnoklassniki(event);
         }
     });

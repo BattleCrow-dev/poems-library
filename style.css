@@ -15,8 +15,8 @@
 }
 
 body {
-    background-color: var(--background-color); /* Темный цвет фона */
-    color: var(--text-color); /* Белый цвет текста */
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -25,25 +25,25 @@ body {
 }
 h1, h2, h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--link-color); /* Желтый цвет для заголовков */
-    text-align: center; /* Выравнивание заголовков по центру */
+    color: var(--link-color);
+    text-align: center;
 }
 
 header {
-    background-color: var(--header-background); /* Цвет фона заголовка */
-    text-align: center; /* Выравнивание заголовка по центру */
-    padding: 20px 0; /* Добавляем отступы сверху и снизу */
+    background-color: var(--header-background);
+    text-align: center;
+    padding: 20px 0;
 }
 
 nav {
-    background-color: var(--header-background); /* Цвет фона навигационной панели */
+    background-color: var(--header-background);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Выравнивание ссылок по центру */
-    padding: 15px 0; /* Добавляем отступы сверху и снизу */
+    text-align: center;
+    padding: 15px 0;
 }
 
 #head-of-site {
@@ -53,9 +53,9 @@ nav {
 }
 
 .nav-link {
-    color: var(--link-color); /* Желтый цвет для ссылок */
+    color: var(--link-color);
     text-decoration: none;
-    margin: 5px 15px; /* Добавляем немного отступов между ссылками */
+    margin: 5px 15px;
 }
 
 .nav-link:hover {
@@ -63,14 +63,12 @@ nav {
 }
 
 .nav-link.disabled {
-    pointer-events: none; /* Отключаем события мыши для неактивной ссылки */
-    color: var(--unactive-link-color); /* Меняем цвет текста неактивной ссылки */
+    pointer-events: none;
+    color: var(--unactive-link-color);
 }
 
-/* Стили для главного контента */
-
 main {
-    margin: 0 auto 60px auto; /* Выравнивание контента по центру */
+    margin: 0 auto 60px auto;
     padding-top: 200px;
 }
 
@@ -97,9 +95,7 @@ main {
 
 .main-poem-author:hover {
     transform: rotate(360deg);
-  }
-
-/* Стили для панели случайного стиха */
+}
 
 #random-poem-panel, #news-panel {
     background-color: var(--card-background);
@@ -118,8 +114,6 @@ main {
     color: var(--link-color);
     margin-bottom: 10px;
 }
-
-/* Стили для панели всех стихов */
 
 #all-poems-panel {
     background-color: var(--card-background);
@@ -143,17 +137,14 @@ main {
     justify-content: center;
 }
 
-
-/* Обновленные стили для футера */
 footer {
-    background-color: var(--header-background); /* Цвет фона футера */
+    background-color: var(--header-background);
     color: var(--text-color);
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-/* Стили для панели новостей */
 
 #news-list {
     list-style-type: none;
@@ -163,10 +154,6 @@ footer {
 #news-list li {
     margin-bottom: 10px;
 }
-
-/* Дополнительные стили по необходимости */
-
-/* Стили для формы обратной связи */
 
 #submit-poem-main {
     text-align: center;
@@ -180,7 +167,6 @@ footer {
     padding: 20px;
 }
 
-/* Добавим стили для формы */
 .contact-main {
     display: flex;
     flex-direction: row;
@@ -199,7 +185,7 @@ footer {
     border: 1px solid var(--text-color);
     border-radius: 4px;
     box-sizing: border-box;
-    resize: vertical; /* Разрешить изменение размера только по вертикали */
+    resize: vertical;
 }
 
 #submit-poem-form label {
@@ -235,7 +221,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Стили для карточки с информацией о создателе */
 #contact-main {
     display: flex;
     flex-direction: column;
@@ -262,7 +247,6 @@ footer {
     margin-top: 10px;
 }
 
-/* Стили для контейнера с карточками поэтов */
 #poets-main {
     display: flex;
     flex-direction: column;
@@ -309,7 +293,7 @@ footer {
 }
 
 .poet-card:hover .poet-buttons {
-    height: 100px; /* Высота при наведении (задайте свою высоту) */
+    height: 100px;
 }
 
 .poet-buttons a {
@@ -324,7 +308,6 @@ footer {
     border-radius: 10px;
     object-fit: cover;
 }
-/* Стили для кнопок в карточке поэта */
 
 .btn-bio, .btn-works {
     display: block;
@@ -343,8 +326,6 @@ footer {
 .btn-bio:hover, .btn-works:hover {
     background-color: var(--button-background);
 }
-
-/* Стили для биографической странички */
 
 #biography-heading {
     font-size: 24px;
@@ -381,8 +362,6 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
 }
-
-/* Стили для странички со стихами */
 
 #poems-main {
     text-align: center;

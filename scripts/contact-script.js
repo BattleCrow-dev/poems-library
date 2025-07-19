@@ -1,7 +1,6 @@
-let currentToast; // Хранение ссылки на текущий toast
+let currentToast;
 
 function showToast(message, isSuccess = true) {
-    // Удаление текущего toast, если он существует
     if (currentToast) {
         currentToast.remove();
     }
@@ -10,16 +9,12 @@ function showToast(message, isSuccess = true) {
     toast.className = `toast ${isSuccess ? 'success' : 'error'}`;
     toast.textContent = message;
 
-    // Ваш код для отображения сообщения
     console.log(message);
 
-    // Добавляем toast на страницу
     document.body.appendChild(toast);
 
-    // Устанавливаем текущий toast
     currentToast = toast;
 
-    // Убираем toast через некоторое время
     setTimeout(() => {
         toast.remove();
     }, 3000);
@@ -63,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navLinks = document.querySelectorAll(".nav-link");
 
-    // Проходимся по каждой ссылке и проверяем, соответствует ли её URL текущему URL
     navLinks.forEach(link => {
         const pathArray = window.location.pathname.split("/");
         const currentPath = pathArray[pathArray.length - 1];

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    // Загрузка случайного стиха
     loadRandomPoem();
 
     loadPoems(1);
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     
 });
 
-let currentToast; // Хранение ссылки на текущий toast
+let currentToast;
 
 
 function loadPoems(poetId) {
@@ -95,20 +94,16 @@ function loadRandomPoem() {
     const randomPoemContainer = document.getElementById("random-poem-container");
     const randomPoemName = document.getElementById("random-poem-name");
 
-    // Генерируем случайное число от 1 до 5
     const randomPoemNumber = Math.floor(Math.random() * 5) + 1;
 
-    // Формируем путь к файлу с текстом стихов
     const filePath = `poems/poems_${randomPoemNumber}.txt`;
 
-    // Используем Fetch API для загрузки содержимого файла
     fetch(filePath)
         .then(response => response.text())
         .then(poemText => {
             const poems = poemText.split('====');
             const [title, ...lines] = getRandomElement(poems, 0).split('\n');
 
-            // Отображение случайного стиха в контейнере
             randomPoemName.innerHTML = title;
             randomPoemContainer.innerHTML = `<div id="random-poem">${lines.join('<br>')}</div>`;
         })
@@ -120,7 +115,6 @@ function loadRandomPoem() {
 
 
 function getRandomElement(array, x) {
-    // Функция для получения случайного элемента из массива
     return array[x + Math.floor(Math.random() * (array.length - x))];
 }
 
